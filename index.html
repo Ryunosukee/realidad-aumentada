@@ -7,10 +7,40 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Realidad Aumentada - Estrada Velasquez</title>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+    <style>
+        .container {
+            position: relative;
+            width: 100%;
+        }
+
+        .bg {
+            position:relative;
+            z-index: 1;
+            height: 100%;
+            min-width: 1000px;
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+
+        .nebula {
+            width: 100%;
+        }
+
+        @media screen and (max-width: 1000px) {
+            .nebula {
+                width: 100%;
+                overflow: hidden;
+                margin: 0 -150px 0 -150px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div>
-        <model-viewer camera-controls alt="Invitación Estrada Velasquez" src="https://raw.githubusercontent.com/Ryunosukee/realidad-aumentada/gh-pages/Logo%20Estrada_2022_9.glb" ar ios-src="https://raw.githubusercontent.com/Ryunosukee/realidad-aumentada/gh-pages/Logo%20Estrada_2022_9.usdz" class='w-52' style='width: 750px; height: 750px'></model-viewer>
+    <div class="container">
+        <div class="bg">
+            <model-viewer camera-controls alt="Invitación Estrada Velasquez" src="https://raw.githubusercontent.com/Ryunosukee/realidad-aumentada/gh-pages/Logo%20Estrada_2022_9.glb" ar ios-src="https://raw.githubusercontent.com/Ryunosukee/realidad-aumentada/gh-pages/Logo%20Estrada_2022_9.usdz" class="nebula"></model-viewer>
+        </div>
     </div>
 </body>
 </html>
